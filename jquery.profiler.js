@@ -1,8 +1,10 @@
-// 
-//  jquery.profiler.js
-//  
-//  Copyright 2011 Andrew Okonetchnikov. All rights reserved.
-// 
+/**
+ *  jquery.profiler.js
+ *
+ *  Copyright 2011 Andrew Okonetchnikov. All rights reserved.
+ *  This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0 Unported License</a>.
+ * 
+ **/
 
 (function($){
   
@@ -20,7 +22,7 @@
   $.extend(Profiler.prototype, {
     
     /**
-     * Profiler#lasts(function)
+     * Profiler#lasts(function) -> Function
      * 
      * Taks a function as argument and measures the execution time.
      * Puts result in ms to standard console object.
@@ -40,7 +42,7 @@
     },
     
     /**
-     * Profiler#time(name)
+     * Profiler#time(name) -> null
      * 
      * Simulates console.time call.
      * Use $.debug.profileEnd(name) with the same name as name to put in console time in ms;
@@ -55,7 +57,7 @@
     },
     
     /**
-     * Profiler#timeEnd(name)
+     * Profiler#timeEnd(name) -> null
      * 
      * Simulates console.timeEnd(name).
      * Use along with $.profiler.time(name) to measure time between thoose calls;
