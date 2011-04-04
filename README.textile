@@ -1,0 +1,19 @@
+h1. Basics
+
+jquery.profiler allows you to profile your javascript code on browsers without console. 
+
+It might be useful for profiling on iOS devices.
+
+h1. Syntax
+
+There are 3 basic methods you can use to profile:
+
+* $.profiler.lasts(function)
+* $.profiler.time([name])
+* $.profiler.timeEnd([name])
+
+All these methods outputs into standard console in milliseconds.
+
+$.profiler.lasts(function) takes a function as argument which is useful to profile query selectors etc.
+
+$.profiler.time() and $.profiler.timeEnd() are mimic to console.time() and console.timeEnd() introduced in Firebug (http://getfirebug.com/logging).

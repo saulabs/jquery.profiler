@@ -40,13 +40,13 @@
     },
     
     /**
-     * Profiler#profile(name)
+     * Profiler#time(name)
      * 
-     * Simulates console.profile call.
+     * Simulates console.time call.
      * Use $.debug.profileEnd(name) with the same name as name to put in console time in ms;
      * 
      **/
-    profile: function(name){
+    time: function(name){
       var t0 = new Date();
       if(typeof name !== 'undefined') // Name is defined, so store time as named item
         this._profiler[name] = t0;
@@ -55,13 +55,13 @@
     },
     
     /**
-     * Profiler#profileEnd(name)
+     * Profiler#timeEnd(name)
      * 
-     * Simulates console.profileEnd(name).
-     * Use along with $.debug.profile(name) to measure time between thoose calls;
+     * Simulates console.timeEnd(name).
+     * Use along with $.profiler.time(name) to measure time between thoose calls;
      * 
      **/
-    profileEnd: function(name){
+    timeEnd: function(name){
       var t0,
           t1 = new Date(),
           dt;
