@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Test</title>
+  
+</head>
+<body>
+    
+  <h1>Test case</h1>
+  <p>We'll measure time to create 1000 DOM elements</p>
+    
+  <script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  <!-- <script src="zepto.min.js" type="text/javascript" charset="utf-8"></script> -->
+  
+  <script src="jquery.profiler.js" type="text/javascript" charset="utf-8"></script>  
+  <script type="text/javascript" charset="utf-8">
+  $(document).ready(function(){
+
+    console.time('Creating DOM elements');
+    
+    for(var i = 0; i < 1000; i++) {
+      $(document.body).append('<div class="element'+i+'">This is ' + i + 'th element</div>');
+    }
+    
+    console.timeEnd('Creating DOM elements');
+
+  });
+  </script>
+    
+</body>
+</html>
