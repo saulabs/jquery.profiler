@@ -1,14 +1,14 @@
 h1. Basics
 
-jquery.profiler allows you to profile your javascript code on browsers without console. It is compatible with both jQuery and Zepto frameworks.
+jquery.profiler allows you to profile your javascript code on browsers without a full support of console.time and console.timeEnd methods such as Mobile Safari.
 
-It might be useful for profiling on iOS devices.
+It is compatible with both jQuery and Zepto frameworks.
 
 h1. Syntax
 
 There are 3 basic methods you can use to profile:
 
-* $.profiler.lasts(function)
+* $.profiler.lasts(function, [name])
 * $.profiler.time([name])
 * $.profiler.timeEnd([name])
 
