@@ -74,7 +74,7 @@
         t0 = this._profiler.pop();
         
       dt = t1 - t0;
-      if(typeof console !== 'undefined'){console.log((name || 'Profiler:') + ' ' + dt + 'ms')};
+      console.log((name || 'Time') + ': ' + dt + 'ms');
     }
     
   });
@@ -82,4 +82,8 @@
   // Singleton interface
   $.profiler = new Profiler();
   
-})(jQuery || Zepto);
+  // Extending console object
+  if(typeof console === 'undefined') console = {};
+  $.extend(console, $.profiler);
+  
+})(this.jQuery || this.Zepto);
