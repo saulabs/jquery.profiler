@@ -17,3 +17,10 @@ All these methods outputs into standard console in milliseconds.
 $.profiler.lasts(function) takes a function as argument which is useful to profile query selectors etc.
 
 $.profiler.time() and $.profiler.timeEnd() are mimic to console.time() and console.timeEnd() introduced in Firebug (http://getfirebug.com/logging).
+
+h2. Standard console
+
+As a shorthand you can also use standard console object as:
+
+* console.time(name)
+* console.timeEnd(name)

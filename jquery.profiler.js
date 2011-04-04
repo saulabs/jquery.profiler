@@ -22,7 +22,7 @@
   $.extend(Profiler.prototype, {
     
     /**
-     * Profiler#lasts(function) -> Function
+     * Profiler#lasts(function, [name]) -> Function
      * 
      * Taks a function as argument and measures the execution time.
      * Puts result in ms to standard console object.
